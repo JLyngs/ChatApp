@@ -98,7 +98,7 @@
                     Opacity="0.5"/>
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,50,0,0">
-                    <Button Width="100" Height="40" Content="LOGIN" Margin="0,0,40,0" x:Name="Login"/>
+                    <Button Width="100" Height="40" Content="LOGIN" Margin="0,0,40,0" x:Name="Login" Click="OpenChatClient"/>
                     <Button Width="100" Height="40" Content="REGISTER" x:Name="Register"/>
                 </StackPanel>
             </StackPanel>

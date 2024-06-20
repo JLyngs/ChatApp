@@ -58,6 +58,13 @@ namespace ChatApp
             }
         }
 
+        private void OpenChatClient(object sender, RoutedEventArgs e)
+        {
+            MainWindow objMainWindow = new MainWindow();
+            this.Visibility = Visibility.Hidden;
+            objMainWindow.Show();
+        }
+
 
     }
 }
