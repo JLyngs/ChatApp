@@ -65,6 +65,14 @@ namespace ChatApp
             objMainWindow.Show();
         }
 
+        private void ExitLoginWindow(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
 
+        private void MinimizeLoginWindow(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
     }
 }

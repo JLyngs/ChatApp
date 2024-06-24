@@ -18,19 +18,18 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <DockPanel>
+        <DockPanel Background="#6096B4">
             <TextBox Height="25"
+                     Background="#6096B4"
                      DockPanel.Dock="Top"
                      Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"
-                     BorderBrush="DeepSkyBlue"
-                     BorderThickness="1"
-                     Background="#F5F7F8"/>
+                     BorderThickness="1"/>
             <Button Height="25"
+                    Background="#6096B4"
                     DockPanel.Dock="Top"
                     Content="Connect"
-                    Command="{Binding ConnectToServerCommand}"/>
-            <ListView ItemsSource="{Binding Users}"
-                      Background="#F4CE14">
+                    Command="{Binding ConnectToServerCommand}" Foreground="#FF08E43E"/>
+            <ListView ItemsSource="{Binding Users}" Background="#93BFCF">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <TextBlock Text="{Binding Username}"/>
@@ -40,18 +39,19 @@
         </DockPanel>
 
         <StackPanel Grid.Column="1"
-                    Background="#F5F7F8">
+                    Background="#6096B4">
             <ListView Height="380"
                       ItemsSource="{Binding Messages}"
-                      Background="#495E57"/>
+                      Background="#EEE9DA"/>
             <StackPanel Orientation="Horizontal">
                 <TextBox Height="45"
+                         Background="#BDCDD6"
                          Width="545"
                          VerticalContentAlignment="Center"
-                         Background="#45474B"
-                         Text="{Binding Message, UpdateSourceTrigger=PropertyChanged}"/>
+                         Text="{Binding Message, UpdateSourceTrigger=PropertyChanged}"
+                         Foreground="#93BFCF"/>
                 <Button Width="70"
-                        Background="#F5F7F8"
+                        Background="#93BFCF"
                         Content="Send"
                         Command="{Binding SendMessageCommand}"/>
             </StackPanel>

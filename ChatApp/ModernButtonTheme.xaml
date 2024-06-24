@@ -12,8 +12,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border Background="{TemplateBinding Background}" CornerRadius="20"
-                                                                      BorderThickness="2"
+                    <Border Background="{TemplateBinding Background}" CornerRadius="5"
+                                                                      BorderThickness="1"
                                                                       BorderBrush="White">
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
@@ -24,13 +24,25 @@
 
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="White"/>
-                <Setter Property="Opacity" Value="0.4"/>
                 <Setter Property="Foreground" Value="DeepSkyBlue"/>
             </Trigger>
         </Style.Triggers>
 
 
+    </Style>
+
+    <Style x:Key="CustomFocusVisualStyle" TargetType="Control">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border BorderBrush="LightSalmon" BorderThickness="1.1" CornerRadius="5">
+                        <AdornerDecorator>
+                            <ContentPresenter/>
+                        </AdornerDecorator>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
 
 </ResourceDictionary>
