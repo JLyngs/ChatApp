@@ -43,13 +43,16 @@
             <ListView Height="380"
                       ItemsSource="{Binding Messages}"
                       Background="#EEE9DA"/>
-            <StackPanel Orientation="Horizontal">
-                <TextBox Height="45"
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom">
+                <TextBox MinHeight="32"
+                         Height="auto"
                          Background="#BDCDD6"
                          Width="545"
                          VerticalContentAlignment="Center"
+                         TextWrapping="Wrap"
                          Text="{Binding Message, UpdateSourceTrigger=PropertyChanged}"
-                         Foreground="#93BFCF"/>
+                         KeyDown="EnterKeySendMessage"
+                         Foreground="Black"/>
                 <Button Width="70"
                         Background="#93BFCF"
                         Content="Send"

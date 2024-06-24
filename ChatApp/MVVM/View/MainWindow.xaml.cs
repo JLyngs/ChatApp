@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using ChatClient.MVVM.ViewModel;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -20,5 +21,18 @@ namespace ChatApp
         {
             InitializeComponent();
         }
+
+        private void EnterKeySendMessage(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                var viewModel = DataContext as MainViewModel;
+                if (viewModel != null && viewModel.SendMessageCommand.CanExecute(null))
+                {
+                    viewModel.SendMessageCommand.Execute(null);
+                }
+            }
+        }
+
     }
 }

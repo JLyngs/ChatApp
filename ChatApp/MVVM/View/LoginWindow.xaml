@@ -45,6 +45,7 @@
             <StackPanel Grid.Row="1">
                 <StackPanel Orientation="Horizontal">
                     <TextBox Name="Username"
+                         
                          FontFamily="helvetica"
                          FontWeight="Light"
                          FontSize="20"
